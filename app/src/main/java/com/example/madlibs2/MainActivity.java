@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 madlib += "\n";
 
                 intent.putExtra("data", madlib);
-
             }
         });
 

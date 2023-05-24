@@ -20,5 +20,6 @@ public class SecondScreen extends AppCompatActivity {
       Intent intent = new Intent();
       String display = getIntent().getStringExtra("data");
       madlib.setText(display);
+      startActivity(intent);
     }
 }
