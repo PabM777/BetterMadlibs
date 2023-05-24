@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_madlib"
             android:layout_width="match_parent"
             android:layout_height="307dp"
             android:text="" />
@@ -67,4 +67,12 @@
         app:layout_constraintStart_toStartOf="@+id/guideline6"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
         app:srcCompat="@drawable/quantuamdingle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="416dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

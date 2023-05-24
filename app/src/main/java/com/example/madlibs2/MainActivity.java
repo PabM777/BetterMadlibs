@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText brand;
     private EditText money;
     private EditText noun2;
-    private Button go;
+    private Button btngo;
 
     ArrayList<String> story = new ArrayList<String>();
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         title = findViewById(R.id.tv_title);
         noun = findViewById(R.id.et_noun);
-        verb = findViewById(R.id.et_adverb);
+        verb = findViewById(R.id.et_verb);
         adverb = findViewById(R.id.et_adverb);
         adjective = findViewById(R.id.et_adjective);
         food = findViewById(R.id.et_food);
@@ -46,15 +46,14 @@ public class MainActivity extends AppCompatActivity {
         money = findViewById(R.id.et_money);
         noun2 = findViewById(R.id.et_nountwo);
 
-        go = findViewById(R.id.btn_generate);
+        btngo = findViewById(R.id.btn_generate);
 
 
-        Intent intent = new Intent(this, SecondScreen.class);
+        Intent intent = new Intent(MainActivity.this, SecondScreen.class);
 
-        go.setOnClickListener(new View.OnClickListener() {
+        btngo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String madlib = " a " + noun.getText() + "appeared outta nowhwere and started " + "eating " + food.getText() + "." ;
                 madlib += "\n";
                 madlib += "\n";
@@ -62,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 madlib += "\n";
 
                 intent.putExtra("data", madlib);
+                startActivity(intent);
             }
         });
 
